@@ -7,66 +7,110 @@
 	<title>Brians Ostebiks</title>
 </head>
 <body>
-	<div>
-		<a href="/">Brians Ostebiks</a>
-		<input type="button" value="Menu">
-		<div>
-			<ul>
-				<li><a href="#!">Forside</a></li>
+
+	<header>
+		<a href="/" aria-label="Gå til forsiden">Brians Ostebiks</a>
+
+		<button
+			type="button"
+			aria-label="Åbn menu"
+			aria-expanded="false"
+			aria-controls="hovedmenu"
+		>
+			Menu
+		</button>
+
+		<nav aria-label="Hovedmenu">
+			<ul id="hovedmenu">
+				<li><a href="#!" aria-current="page">Forside</a></li>
 				<li><a href="#!">Produkter</a></li>
 				<li><a href="#!">Historie</a></li>
 				<li><a href="#!">Kontakt</a></li>
 			</ul>
-		</div>
-	</div>
+		</nav>
+	</header>
 
-	<div>
+	<main>
 		<h1>Brians Ostebiks</h1>
-		<p>Velkommen til min lille forretning. Her kan du købe alverdens oste til fornuftige priser. Jeg elsker ost, og derfor kan du være sikker på, at jeg kun har det allerbedste til dig.</p>
-		
-		<h2>Særlige tilbud</h2>
-		<div>
-			<h3>Ældgammel Rochefort</h3>
-			<img src="https://placehold.co/200x200">
-			<p>Denne Rochefort kan kravle hen ad køkkenbordet helt af sig selv.</p>
-			<p>Kr. 97,50</p>
-			<a href="#!/produkter/4432">Læs mere</a>
-		</div>
-		<div>
-			<h3>Mild Brie</h3>
-			<img src="https://placehold.co/200x200">
-			<p>Hvidskimmelosten alle elsker.</p>
-			<p>Kr. 43,95</p>
-			<a href="#!/produkter/43329">Læs mere</a>
-		</div>
-		<div>
-			<h3>Potkäse</h3>
-			<img src="https://placehold.co/200x200">
-			<p>Min egen hjemmerørte potkäse.</p>
-			<p>Kr. 52,50</p>
-			<a href="#!/produkter/2342">Læs mere</a>
-		</div>
-	</div>
+		<p>
+			Velkommen til min lille forretning. Her kan du købe alverdens oste til fornuftige priser.
+			Jeg elsker ost, og derfor kan du være sikker på, at jeg kun har det allerbedste til dig.
+		</p>
 
-	<div>
-		<div>
-			<p>Brians Ostebiks</p>
-			<p>Camembert Boulevard 42</p>
-			<p>4242 Nørre Osteved</p>
-			<p>Tlf.: 1243 5687</p>
-			<p><a href="mailto:cheesylove@briansostebiks.dk">cheesylove@briansostebiks.dk</a></p>
-		</div>
-		<div>
-			<h1>Find os her</h1>
+		<section>
+			<h2 id="tilbud-overskrift">Særlige tilbud</h2>
+
+			<article>
+				<h3 id="produkt-rochefort">Ældgammel Rochefort</h3>
+				<img
+					src="https://placehold.co/200x200"
+					alt="Ældgammel Rochefort ost"
+				>
+				<p>Denne Rochefort kan kravle hen ad køkkenbordet helt af sig selv.</p>
+				<p aria-label="Pris">Kr. 97,50</p>
+				<a href="#!/produkter/4432" aria-label="Læs mere om Ældgammel Rochefort">
+					Læs mere
+				</a>
+			</article>
+
+			<article>
+				<h3 id="produkt-brie">Mild Brie</h3>
+				<img
+					src="https://placehold.co/200x200"
+					alt="Mild Brie ost"
+				>
+				<p>Hvidskimmelosten alle elsker.</p>
+				<p aria-label="Pris">Kr. 43,95</p>
+				<a href="#!/produkter/43329" aria-label="Læs mere om Mild Brie">
+					Læs mere
+				</a>
+			</article>
+
+			<article aria-labelledby="produkt-potkaese">
+				<h3 id="produkt-potkaese">Potkäse</h3>
+				<img
+					src="https://placehold.co/200x200"
+					alt="Hjemmelavet potkäse"
+				>
+				<p>Min egen hjemmerørte potkäse.</p>
+				<p aria-label="Pris">Kr. 52,50</p>
+				<a href="#!/produkter/2342" aria-label="Læs mere om Potkäse">
+					Læs mere
+				</a>
+			</article>
+		</section>
+	</main>
+
+	<footer>
+		<section aria-labelledby="kontakt-overskrift">
+			<h2 id="kontakt-overskrift" class="visually-hidden">Kontakt</h2>
+
+			<address>
+				<p>Brians Ostebiks</p>
+				<p>Camembert Boulevard 42</p>
+				<p>4242 Nørre Osteved</p>
+				<p>Tlf.: <span aria-label="Telefonnummer">1243 5687</span></p>
+				<p>
+					<a href="mailto:cheesylove@briansostebiks.dk">
+						cheesylove@briansostebiks.dk
+					</a>
+				</p>
+			</address>
+		</section>
+
+		<section aria-labelledby="sociale-medier">
+			<h2 id="sociale-medier">Find os her</h2>
 			<ul>
-				<li><a href="#!">Facebook</a></li>
-				<li><a href="#!">Instragram</a></li>
-				<li><a href="#!">Twitter</a></li>
+				<li><a href="#!" aria-label="Brians Ostebiks på Facebook">Facebook</a></li>
+				<li><a href="#!" aria-label="Brians Ostebiks på Instagram">Instagram</a></li>
+				<li><a href="#!" aria-label="Brians Ostebiks på Twitter">Twitter</a></li>
 			</ul>
-		</div>
-		<div>
+		</section>
+
+		<small>
 			Ophavsret &copy; 2018 Brians Ostebiks. Alle rettigheder forbeholdes.
-		</div>
-	</div>
+		</small>
+	</footer>
+
 </body>
 </html>
